@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>Form Pendaftaran Mahasiswa</h3>
+        </div>
+        <form action="">
+            <div>
+                <label for="name">Nama Lengkap</label>
+                <input type="text" placeholder="Masukkan nama lengkap" id="name" required>
+            </div>
+            
+            <div>
+                <label for="nim">Nomor Induk Mahasiswa (NIM)</label>
+                <input type="text" placeholder="Masukkan NIM" id="nim" required>
+            </div>
+            
+            <div class="form-group">
+                <div>
+                    <label for="angkatan">Angkatan</label>
+                    <select id="angkatan" required>
+                        <option value="">Pilih Angkatan</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tanggal">Tanggal Pendaftaran</label>
+                    <input type="date" id="tanggal" required>
+                </div>
+            </div>
+            
+            <div>
+                <p>Peminatan pada bidang:</p>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="peminatan" id="programming" value="Programming" required>
+                        <label for="programming">Programming</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="peminatan" id="desain" value="Desain">
+                        <label for="desain">UI/UX Design</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="peminatan" id="jaringan" value="Jaringan">
+                        <label for="jaringan">Jaringan Komputer</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="peminatan" id="data" value="Data">
+                        <label for="data">Sains Data</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <label for="alamat">Alamat Lengkap</label>
+                <textarea placeholder="Tulis alamat lengkap Anda" name="alamat" id="alamat" cols="30" rows="5" required></textarea>
+            </div>
+            
+            <button type="button" onclick="kirimData()">Daftar Sekarang</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
